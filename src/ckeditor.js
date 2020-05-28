@@ -31,6 +31,8 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import Mention from '@ckeditor/ckeditor5-mention/src/mention';
 
+import ShowTagsPlugin from './showTagsPlugin'
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -58,7 +60,8 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	Mention
+	Mention,
+	ShowTagsPlugin
 ];
 
 // Editor configuration.
@@ -76,10 +79,10 @@ ClassicEditor.defaultConfig = {
 			'indent',
 			'outdent',
 			'|',
-			'imageUpload',
 			'blockQuote',
 			'insertTable',
-			'mediaEmbed',
+			'|',
+			'showTags',
 			'undo',
 			'redo'
 		]
