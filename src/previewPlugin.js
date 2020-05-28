@@ -17,8 +17,7 @@ export default class PreviewPlugin extends Plugin {
 
       view.on('execute', () => {
         const event = new CustomEvent('request-preview')
-        document.body.dispatchEvent(event)
-        console.log('editor!', editor)
+        editor.ui.view.element.dispatchEvent(event)
       });
 
       return view
