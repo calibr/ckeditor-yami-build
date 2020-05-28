@@ -18,7 +18,7 @@ export default class ShowTagsPlugin extends Plugin {
       view.on('execute', () => {
         editor.model.change(writer => {
           const insertPosition = editor.model.document.selection.getFirstPosition()
-          writer.insertText('{', insertPosition)
+          writer.insertText(' {', insertPosition)
         })
       });
 

@@ -32,6 +32,7 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import Mention from '@ckeditor/ckeditor5-mention/src/mention';
 
 import ShowTagsPlugin from './showTagsPlugin'
+import PreviewPlugin from './previewPlugin'
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -61,7 +62,8 @@ ClassicEditor.builtinPlugins = [
 	TableToolbar,
 	TextTransformation,
 	Mention,
-	ShowTagsPlugin
+	ShowTagsPlugin,
+	PreviewPlugin
 ];
 
 // Editor configuration.
@@ -81,8 +83,8 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'blockQuote',
 			'insertTable',
-			'|',
 			'showTags',
+			'preview',
 			'undo',
 			'redo'
 		]
