@@ -1,6 +1,6 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin'
 import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview'
-import icon from './eye-open.svg'
+import icon from './unsubscribe.svg'
 
 export default class PreviewPlugin extends Plugin {
   init() {
@@ -16,7 +16,10 @@ export default class PreviewPlugin extends Plugin {
       })
 
       view.on('execute', () => {
-        editor.execute( 'link', 'https://yamiadvisor.com/unsubscribe' );
+        editor.model.change( writer => {
+          const insertPosition = editor.model.document.selection.getFirstPosition();
+          writer.insertText( 'Unsubscribe', {linkHref: 'https://yamiadvisor.com/unsubscribe'}, insertPosition );
+        } )
       });
 
       return view
