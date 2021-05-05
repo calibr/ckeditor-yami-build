@@ -33,6 +33,7 @@ import Mention from '@ckeditor/ckeditor5-mention/src/mention';
 
 import ShowTagsPlugin from './showTagsPlugin'
 import PreviewPlugin from './previewPlugin'
+import UnsubscribeLink from './unsubscribeLink'
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -54,6 +55,7 @@ ClassicEditor.builtinPlugins = [
 	ImageUpload,
 	Indent,
 	Link,
+	UnsubscribeLink,
 	List,
 	MediaEmbed,
 	Paragraph,
@@ -75,6 +77,7 @@ ClassicEditor.defaultConfig = {
 			'bold',
 			'italic',
 			'link',
+			'unsubscribeLink',
 			'bulletedList',
 			'numberedList',
 			'|',
